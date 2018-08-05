@@ -1,0 +1,9 @@
+.aprobado {
+    background-color: green;
+    color: white;
+}
+
+.suspendido {
+    background-color: red;
+    color: white;
+}

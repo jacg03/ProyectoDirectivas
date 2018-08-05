@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-6">
+    <hr>
+    <h4>Ejemplo directiva *ngIf</h4>
+    <label for="">Introduce un valor</label>
+    <input type="text" class="form-control" [(ngModel)]="nombre">
+    <button *ngIf="nombre; else desactivado" class="btn btn-primary btn-block">Hello</button>
+    <ng-template #desactivado>
+      <button type="submit" class="btn btn-primary btn-block" disabled>Goodbye</button>
+    </ng-template>
+  </div>
+
+  <div class="col-6">
+    <hr>
+    <h4>Ejemplo directiva *ngIf 2</h4>
+    <label for="">¿Cual es la capital de Mexico?</label>
+    <input type="text" class="form-control" [(ngModel)]="capital">
+    <p *ngIf="!capital; else correcto">Completa la pregunta</p>
+    <ng-template #correcto>
+      <h4 *ngIf="getResultado(); else incorrecto">¡Correcto!</h4>
+      <ng-template #incorrecto>
+        <h4>Lo siento, intentelo de nuevo</h4>
+      </ng-template>
+    </ng-template>
+  </div>
+</div>
